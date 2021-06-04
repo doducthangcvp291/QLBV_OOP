@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.btccontroller">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="280.0" style="-fx-background-color: #3f2b63;">
+            <children>
+                <Pane prefHeight="100.0" prefWidth="300.0">
+                    <children>
+                        <Label layoutX="93.0" layoutY="41.0" text="Menu" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Button fx:id="clickMe" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #3f2b63;" text="Mẹ" textFill="WHITE">
+                    <padding>
+                        <Insets left="70.0" />
+                    </padding>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clickBe" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #3f2b63;" text="Bé" textFill="WHITE">
+                    <padding>
+                        <Insets left="70.0" />
+                    </padding>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clickPhongKham" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleClick" pickOnBounds="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #3f2b63;" text="Phòng Khám" textFill="WHITE">
+                    <padding>
+                        <Insets left="70.0" />
+                    </padding>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clickThongTinTiemChung" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #3f2b63;" text="Thông Tin Tiêm Chủng" textFill="WHITE">
+                    <padding>
+                        <Insets left="70.0" />
+                    </padding>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clickChiSoDinhDuong" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #3f2b63;" text="Chỉ số dinh dưỡng" textFill="WHITE">
+                    <padding>
+                        <Insets left="70.0" />
+                    </padding>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <StackPane layoutX="280.0" prefHeight="600.0" prefWidth="670.0">
+            <children>
+                <GridPane fx:id="ThongTinTiemChung" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="245.19998779296876" minHeight="10.0" prefHeight="178.3999816894531" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="439.99999313354493" minHeight="10.0" prefHeight="318.4000183105469" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="154.00003662109373" minHeight="10.0" prefHeight="104.00002441406247" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="-6.0" layoutY="34.0" prefHeight="70.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <Label layoutX="83.0" layoutY="9.0" text="/Menu/Thông tin Tiêm Chủng" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="83.0" layoutY="24.0" text="Thông tin Tiêm Chủng" textFill="WHITE">
+                                            <font>
+                                                <Font size="22.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <TextField fx:id="TimIDTiemChung" layoutX="36.0" layoutY="139.0" />
+                                <TextField fx:id="TìmPhongKhamTiemChung" layoutX="243.0" layoutY="139.0" />
+                                <JFXButton layoutX="446.0" layoutY="139.0" onAction="#TìmThongTinTiemChung" style="-fx-background-color: #7156dc;" text="Tìm Kiếm" textFill="WHITE" />
+                                <JFXButton layoutX="579.0" layoutY="139.0" onAction="#XoaThongTinTiemChung" style="-fx-background-color: #7156dc;" text=" Xóa" textFill="WHITE" />
+                                <Label layoutX="97.0" layoutY="122.0" text="ID" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                                <Label layoutX="292.0" layoutY="122.0" text="Tên Phòng Khám" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                            <columns>
+                                <TableColumn prefWidth="75.0" style="-fx-background-color: #33CC66;" text="ID" />
+                                <TableColumn prefWidth="120.0" style="-fx-background-color: #33CC66;" text="Ngày Tiêm" />
+                                <TableColumn prefWidth="95.20004272460938" style="-fx-background-color: #33CC66;" text="Loại Vắc Xin" />
+                                <TableColumn prefWidth="115.20001220703125" style="-fx-background-color: #33CC66;" text="Phòng Khám" />
+                                <TableColumn prefWidth="268.79998779296875" style="-fx-background-color: #33CC66;" text="Phản ứng sau tiêm/ ghi chú" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <TextField fx:id="ThemIDTIemChung" layoutX="3.0" layoutY="7.0" prefWidth="70.0" />
+                                        <TextField fx:id="ThemNgayTiem" layoutX="78.0" layoutY="7.0" prefHeight="26.0" prefWidth="116.0" />
+                                        <TextField fx:id="ThemLoaiVXTIem" layoutX="199.0" layoutY="7.0" prefHeight="26.0" prefWidth="90.0" />
+                                        <TextField fx:id="ThemPhongKhamTiem" layoutX="293.0" layoutY="7.0" prefHeight="26.0" prefWidth="110.0" />
+                                        <TextField fx:id="ThemPhanUngGhiChu" layoutX="409.0" layoutY="7.0" prefHeight="26.0" prefWidth="259.0" />
+                                    </children>
+                                </AnchorPane>
+                                <JFXButton layoutX="586.0" layoutY="64.0" onAction="#ThemThongTinTiemChung" style="-fx-background-color: #7156dc;" text="Thêm" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+                <GridPane fx:id="ChiSoDinhDuong" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="245.19998779296876" minHeight="10.0" prefHeight="178.3999816894531" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="439.99999313354493" minHeight="10.0" prefHeight="318.4000183105469" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="154.00003662109373" minHeight="10.0" prefHeight="104.00002441406247" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="-6.0" layoutY="34.0" prefHeight="70.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <Label layoutX="83.0" layoutY="9.0" text="/Menu/Chi số dinh dưỡng" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="83.0" layoutY="24.0" text="Chỉ số dinh dưỡng" textFill="WHITE">
+                                            <font>
+                                                <Font size="22.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <TextField fx:id="IDChiSoDinhDong" layoutX="161.0" layoutY="139.0" />
+                                <JFXButton layoutX="365.0" layoutY="139.0" onAction="#NhapIDChiSoDinhDuong" style="-fx-background-color: #7156dc;" text="Xong" textFill="WHITE" />
+                                <JFXButton layoutX="536.0" layoutY="139.0" onAction="#XoaLanNhap" style="-fx-background-color: #7156dc;" text=" Xóa" textFill="WHITE" />
+                                <Label layoutX="202.0" layoutY="121.0" text="Nhập ID bé :" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                            <columns>
+                                <TableColumn prefWidth="195.2000732421875" style="-fx-background-color: #33CC66;" text="Chiều cao (Cm)" />
+                                <TableColumn prefWidth="255.199951171875" style="-fx-background-color: #33CC66;" text="Cân Nặng (Kg)" />
+                                <TableColumn prefWidth="220.0" style="-fx-background-color: #33CC66;" text="BMI" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <TextField fx:id="ChieuCao" layoutX="4.0" layoutY="7.0" prefHeight="26.0" prefWidth="190.0" />
+                                        <TextField fx:id="CanNang" layoutX="199.0" layoutY="7.0" prefHeight="26.0" prefWidth="246.0" />
+                                        <TextField fx:id="NhapBMI" layoutX="450.0" layoutY="7.0" prefHeight="26.0" prefWidth="218.0" />
+                                    </children>
+                                </AnchorPane>
+                                <JFXButton layoutX="352.0" layoutY="67.0" onAction="#ThemChiSoDinhDuong" style="-fx-background-color: #7156dc;" text="Thêm" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+                <GridPane fx:id="PhongKham" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="245.19998779296876" minHeight="10.0" prefHeight="178.3999816894531" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="439.99999313354493" minHeight="10.0" prefHeight="318.4000183105469" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="154.00003662109373" minHeight="10.0" prefHeight="104.00002441406247" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="-6.0" layoutY="34.0" prefHeight="70.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <Label layoutX="83.0" layoutY="9.0" text="/Menu/Phòng Khám" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="83.0" layoutY="24.0" text="Phòng Khám" textFill="WHITE">
+                                            <font>
+                                                <Font size="22.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <TextField fx:id="TimTenPhongKham" layoutX="36.0" layoutY="139.0" />
+                                <TextField fx:id="TimDiaDiemPhongKham" layoutX="243.0" layoutY="139.0" />
+                                <JFXButton layoutX="451.0" layoutY="139.0" onAction="#TimPhongKham" style="-fx-background-color: #7156dc;" text="Tìm Kiếm" textFill="WHITE" />
+                                <JFXButton layoutX="579.0" layoutY="139.0" onAction="#XoaPhongKham" style="-fx-background-color: #7156dc;" text=" Xóa" textFill="WHITE" />
+                                <Label layoutX="65.0" layoutY="122.0" text="Tên phòng Khám" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                                <Label layoutX="292.0" layoutY="122.0" text="Địa Điểm" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                        <JFXButton layoutX="451.0" layoutY="109.0" onAction="#showttpk" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #7156dc;" text="Xem" textAlignment="CENTER" textFill="WHITE" fx:id="xemttpk" />
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="tbphongkham" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                            <columns>
+                                <TableColumn fx:id="tbtenphongkham" prefWidth="334.3999938964844" style="-fx-background-color: #33CC66;" text="Tên Phòng Khám" />
+                                <TableColumn fx:id="tbdiadiemphongkham" minWidth="0.0" prefWidth="336.00006103515625" style="-fx-background-color: #33CC66;" text="Địa Điểm Phòng Khám" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <TextField fx:id="ThemTenPhongKham" layoutX="3.0" layoutY="7.0" prefHeight="26.0" prefWidth="329.0" />
+                                        <TextField fx:id="ThemDiaDIemPhongKham" layoutX="338.0" layoutY="7.0" prefHeight="26.0" prefWidth="330.0" />
+                                    </children>
+                                </AnchorPane>
+                                <JFXButton layoutX="586.0" layoutY="64.0" onAction="#THemPhongKham" style="-fx-background-color: #7156dc;" text="Thêm" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+                <GridPane fx:id="Be" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="245.19998779296876" minHeight="10.0" prefHeight="178.3999816894531" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="439.99999313354493" minHeight="10.0" prefHeight="318.4000183105469" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="154.00003662109373" minHeight="10.0" prefHeight="104.00002441406247" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="-6.0" layoutY="34.0" prefHeight="70.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <Label layoutX="83.0" layoutY="9.0" text="/Menu/Be" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="83.0" layoutY="24.0" text="Bé" textFill="WHITE">
+                                            <font>
+                                                <Font size="22.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <TextField fx:id="TimIDBe" layoutX="36.0" layoutY="139.0" />
+                                <TextField fx:id="TimTenBe" layoutX="243.0" layoutY="139.0" />
+                                <JFXButton layoutX="451.0" layoutY="139.0" onAction="#TimBe" style="-fx-background-color: #7156dc;" text="Tìm Kiếm" textFill="WHITE" />
+                                <JFXButton layoutX="579.0" layoutY="139.0" onAction="#XoaBe" style="-fx-background-color: #7156dc;" text=" Xóa" textFill="WHITE" />
+                                <Label layoutX="97.0" layoutY="122.0" text="ID" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                                <Label layoutX="292.0" layoutY="122.0" text="Họ và tên" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                            <columns>
+                                <TableColumn prefWidth="75.0" style="-fx-background-color: #33CC66;" text="ID" />
+                                <TableColumn prefWidth="150.0" style="-fx-background-color: #33CC66;" text="Họ Và Tên" />
+                                <TableColumn prefWidth="125.0" style="-fx-background-color: #33CC66;" text="Ngày sinh" />
+                                <TableColumn prefWidth="320.0" style="-fx-background-color: #33CC66;" text="Ghi chú" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <TextField fx:id="ThemIDBe" layoutX="3.0" layoutY="7.0" prefWidth="70.0" />
+                                        <TextField fx:id="ThemHoTenBe" layoutX="78.0" layoutY="7.0" prefWidth="145.0" />
+                                        <TextField fx:id="ThemNgaySinhBe" layoutX="228.0" layoutY="7.0" prefWidth="120.0" />
+                                        <TextField fx:id="ThemGhiChuBe" layoutX="353.0" layoutY="7.0" prefWidth="315.0" />
+                                    </children>
+                                </AnchorPane>
+                                <JFXButton layoutX="586.0" layoutY="64.0" onAction="#ThemBe" style="-fx-background-color: #7156dc;" text="Thêm" textFill="WHITE" />
+                                <JFXButton layoutX="110.0" layoutY="64.0" onAction="#ThongTinChiTietBe" style="-fx-background-color: #7156dc;" text="Thông tin chi tiết" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+                <GridPane fx:id="Me" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="245.19998779296876" minHeight="10.0" prefHeight="178.3999816894531" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="439.99999313354493" minHeight="10.0" prefHeight="318.4000183105469" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="154.00003662109373" minHeight="10.0" prefHeight="104.00002441406247" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="-6.0" layoutY="34.0" prefHeight="70.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <Label layoutX="83.0" layoutY="9.0" text="/Menu/Mẹ" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="83.0" layoutY="24.0" text="Mẹ" textFill="WHITE">
+                                            <font>
+                                                <Font size="22.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <TextField fx:id="TimID" layoutX="36.0" layoutY="139.0" />
+                                <TextField fx:id="TimTen" layoutX="243.0" layoutY="139.0" />
+                                <JFXButton layoutX="451.0" layoutY="139.0" onAction="#TimMe" style="-fx-background-color: #7156dc;" text="Tìm Kiếm" textFill="WHITE" />
+                                <JFXButton layoutX="579.0" layoutY="139.0" onAction="#XoaMe" style="-fx-background-color: #7156dc;" text=" Xóa" textFill="WHITE" />
+                                <Label layoutX="97.0" layoutY="122.0" text="ID" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                                <Label layoutX="292.0" layoutY="122.0" text="Họ và tên" textFill="RED">
+                                    <effect>
+                                        <SepiaTone />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <TableView fx:id="tbme" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                            <columns>
+                                <TableColumn fx:id="tbmeid" prefWidth="70.4000244140625" style="-fx-background-color: #33CC66;" text="ID" />
+                                <TableColumn fx:id="tbmehovaten" prefWidth="170.4000244140625" style="-fx-background-color: #33CC66;" text="Họ Và Tên" />
+                                <TableColumn fx:id="tbmengaysinh" prefWidth="88.0" style="-fx-background-color: #33CC66;" text="Năm sinh" />
+                                <TableColumn fx:id="tbmengayhasinh" minWidth="0.0" prefWidth="84.0" style="-fx-background-color: #33CC66;" text="Ngày hạ sinh" />
+                        <TableColumn fx:id="tbmebmi" prefWidth="46.400146484375" style="-fx-background-color: #33CC66;" text="BMI" />
+                        <TableColumn fx:id="tbmeghichu" prefWidth="205.60009765625" style="-fx-background-color: #33CC66;" text="Ghi chú" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <AnchorPane layoutY="14.0" prefHeight="40.0" prefWidth="670.0" style="-fx-background-color: #7156dc;">
+                                    <children>
+                                        <TextField fx:id="ThemIDME" layoutX="3.0" layoutY="7.0" prefWidth="70.0" />
+                                        <TextField fx:id="ThemTenMe" layoutX="78.0" layoutY="7.0" prefWidth="145.0" />
+                                        <TextField fx:id="ThemNgaySinhMe" layoutX="228.0" layoutY="7.0" prefHeight="26.0" prefWidth="77.0" />
+                                        <TextField fx:id="ThemGheChuMe" layoutX="494.0" layoutY="7.0" prefHeight="26.0" prefWidth="174.0" />
+                              <TextField fx:id="ThemBMIme" layoutX="440.0" layoutY="7.0" prefHeight="26.0" prefWidth="49.0" />
+                              <DatePicker fx:id="ThemNgayHaSinh" layoutX="313.0" layoutY="7.0" prefHeight="26.0" prefWidth="120.0" />
+                                    </children>
+                                </AnchorPane>
+                                <JFXButton layoutX="586.0" layoutY="64.0" onAction="#ThemMe" style="-fx-background-color: #7156dc;" text="Thêm" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
